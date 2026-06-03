@@ -61,7 +61,7 @@ export function MeetBell() {
               {/* App header */}
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-full bg-ink-soft flex items-center justify-center">
-                  <BellMark size={18} light />
+                  <BellMark size={18} color="#E5C580" />
                 </div>
                 <div>
                   <p className="text-sm font-sans font-medium text-text-on-ink">Bell</p>

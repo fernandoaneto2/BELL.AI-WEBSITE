@@ -3,39 +3,49 @@ import { cn } from "@/lib/utils";
 interface BellMarkProps {
   className?: string;
   size?: number;
-  light?: boolean;
+  color?: string;
 }
 
-export function BellMark({ className, size = 32, light }: BellMarkProps) {
-  const fill = light ? "#E5C580" : "#C9A24B";
+export function BellMark({ className, size = 32, color = "#C9A24B" }: BellMarkProps) {
   return (
     <svg
       width={size}
       height={size}
-      viewBox="0 0 40 44"
+      viewBox="0 0 56 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
       className={cn("shrink-0", className)}
     >
-      {/* Bell dome */}
+      {/* Handle — top bar */}
+      <rect x="22" y="2" width="9" height="4" rx="2" fill={color} />
+      {/* Handle — stem */}
+      <rect x="24.5" y="5.5" width="4" height="4.5" rx="2" fill={color} />
+
+      {/* Bell dome — arc stroke */}
       <path
-        d="M20 4C20 4 8 10 8 24H32C32 10 20 4 20 4Z"
-        fill={fill}
-        opacity="0.95"
+        d="M 5 38 C 5 18 14 9 26.5 9 C 39 9 48 18 48 38"
+        stroke={color}
+        strokeWidth="3.5"
+        strokeLinecap="round"
+        fill="none"
       />
-      {/* Bell body base */}
-      <rect x="6" y="24" width="28" height="4" rx="2" fill={fill} />
-      {/* Bell stand */}
-      <rect x="18" y="28" width="4" height="4" rx="1" fill={fill} opacity="0.8" />
-      {/* Base plate */}
-      <rect x="10" y="32" width="20" height="3" rx="1.5" fill={fill} />
-      {/* Top button */}
-      <circle cx="20" cy="4" r="2.5" fill={fill} opacity="0.7" />
-      {/* Speed lines (AI motif) */}
-      <line x1="33" y1="20" x2="37" y2="20" stroke={fill} strokeWidth="2" strokeLinecap="round" opacity="0.6" />
-      <line x1="34" y1="16" x2="37" y2="14" stroke={fill} strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
-      <line x1="34" y1="24" x2="37" y2="26" stroke={fill} strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
+
+      {/* Collar ring */}
+      <rect x="3" y="38" width="45" height="5.5" rx="2.75" fill={color} />
+
+      {/* Base */}
+      <rect x="8" y="45" width="35" height="7" rx="3.5" fill={color} />
+
+      {/* Speed lines — right side */}
+      {/* Line 1 (longest) */}
+      <rect x="40" y="18" width="14" height="3" rx="1.5" fill={color} />
+      {/* Line 2 + dot */}
+      <rect x="40" y="26" width="9.5" height="3" rx="1.5" fill={color} />
+      <circle cx="52" cy="27.5" r="2" fill={color} />
+      {/* Line 3 + dot */}
+      <rect x="40" y="34" width="6" height="3" rx="1.5" fill={color} />
+      <circle cx="48.5" cy="35.5" r="2" fill={color} />
     </svg>
   );
 }
