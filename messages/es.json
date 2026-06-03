@@ -1,0 +1,180 @@
+{
+  "nav": {
+    "howItWorks": "Cómo funciona",
+    "liveDemo": "Demo en vivo",
+    "forYourBusiness": "Para tu negocio",
+    "faq": "FAQ",
+    "bookDemo": "Reservar demo"
+  },
+  "hero": {
+    "eyebrow": "THE NORTH FORK CONCIERGE",
+    "headline": "Dale a cada huésped un conocedor local —\nsin agregar trabajo a tu equipo.",
+    "subhead": "Bell es una conserje de IA que conoce el North Fork de verdad. Los huéspedes escanean un código y obtienen recomendaciones, reservas y respuestas al instante — en su idioma, a cualquier hora.",
+    "ctaPrimary": "Reservar demo",
+    "ctaSecondary": "Ver Bell en acción →",
+    "trustLine": "Creada para hoteles, posadas, restaurantes y bodegas del North Fork."
+  },
+  "theShift": {
+    "eyebrow": "EL CAMBIO",
+    "headline": "Tus huéspedes tienen preguntas a toda hora.\nTu equipo no puede — y no debería tener que.",
+    "body": "\"¿A qué hora cierra la sala de catas?\" \"¿Dónde hay un buen restaurante esta noche?\" \"¿Hay una heladería cerca?\" Excelentes preguntas. Repetidas una y otra vez. Bell las maneja en el momento en que surgen, para que tu recepción pueda enfocarse en los momentos que realmente necesitan el toque humano.",
+    "pain1Title": "Preguntas repetitivas",
+    "pain1Body": "Las mismas doce preguntas, todos los días.",
+    "pain2Title": "Silencio fuera de horario",
+    "pain2Body": "Los huéspedes siguen preguntando a las 11pm. No hay nadie en la recepción.",
+    "pain3Title": "Magia local perdida",
+    "pain3Body": "Los huéspedes se van sin descubrir lo mejor de la zona."
+  },
+  "meetBell": {
+    "eyebrow": "CONOCE A BELL",
+    "headline": "No es un chatbot. Es una conserje que realmente conoce el lugar.",
+    "body": "Bell habla como una local cálida y experimentada — no como un guión. Recuerda lo que les gusta a tus huéspedes, los dirige a la sala de catas correcta, reserva la mesa y planea el día. Todo con la apariencia de tu propiedad.",
+    "chip1": "Cálida",
+    "chip2": "Conocedora",
+    "chip3": "Discreta",
+    "chip4": "Siempre disponible"
+  },
+  "howItWorks": {
+    "eyebrow": "CÓMO FUNCIONA",
+    "headline": "En marcha en un fin de semana, no en un trimestre.",
+    "step1Number": "01",
+    "step1Title": "Escanear",
+    "step1Body": "Los huéspedes escanean tu código QR de Bell — en la mesa, en la habitación, en la recepción. Sin descargar ninguna app.",
+    "step2Number": "02",
+    "step2Title": "Preguntar lo que sea",
+    "step2Body": "Desde maridajes de vino hasta horarios de cierre o \"sorprende a mi pareja\". Bell responde al instante, en el idioma del huésped.",
+    "step3Number": "03",
+    "step3Title": "Vivir más",
+    "step3Body": "Bell reserva, recomienda y planea — para que los huéspedes hagan más, gasten más y recuerden tu lugar."
+  },
+  "liveDemo": {
+    "eyebrow": "VE BELL EN ACCIÓN",
+    "headline": "Esto es lo que sentirán tus huéspedes.",
+    "subhead": "Una conversación real con Bell — prueba las sugerencias de abajo.",
+    "bellOpening": "Hola, soy Bell — tu conserje del North Fork. Pregúntame lo que quieras: bodegas, happy hour, helados, o déjame planear tu día.",
+    "chip1": "Cata de vinos cercana",
+    "chip2": "Mejor happy hour esta noche",
+    "chip3": "Planear una noche romántica",
+    "chip4": "Heladerías",
+    "script": {
+      "wineTasting": {
+        "userMessage": "Cata de vinos cercana",
+        "bellResponse": "¡Excelente elección! El North Fork es tierra de vinos. Empezaría con Bedell Cellars por sus vistas y degustaciones accesibles, luego Raphael para algo más estructurado. Ambos a menos de 10 minutos. ¿Quieres que revise sus horarios o te ayude a planear la tarde?"
+      },
+      "happyHour": {
+        "userMessage": "Mejor happy hour esta noche",
+        "bellResponse": "La mejor opción esta noche: First and South en Greenport abre su terraza a las 4pm — ostras a mitad de precio y cervezas locales hasta las 6. The Frisky Oyster es el segundo favorito. ¿Quieres indicaciones o una reserva?"
+      },
+      "romanticEvening": {
+        "userMessage": "Planear una noche romántica",
+        "bellResponse": "Perfecto. Empieza con ostras al atardecer junto al agua, luego una mesa tranquila en un favorito local, y termina con un paseo bajo las lucecitas. ¿Quiero reservar la mesa?"
+      },
+      "iceCream": {
+        "userMessage": "Heladerías",
+        "bellResponse": "Scoops en Mattituck es el favorito local — sabores artesanales, especiales de temporada, y una fila que vale la pena esperar. Abierto hasta las 9pm esta noche. A unos 8 minutos de aquí. ¿Lo agrego a tu plan?"
+      }
+    }
+  },
+  "onlyBellKnows": {
+    "eyebrow": "SOLO BELL SABE",
+    "headline": "Conocimiento local que no encontrarás en un buscador.",
+    "body": "Bell está construida sobre conocimiento real y verificado del North Fork — las bodegas que valen el viaje, la mesa con vista al atardecer, el happy hour al que van los locales. Curado, actualizado y específico al lugar donde están tus huéspedes.",
+    "chip1": "Bodegas",
+    "chip2": "Restaurantes",
+    "chip3": "Happy hours",
+    "chip4": "Joyas escondidas",
+    "chip5": "Planes del día"
+  },
+  "forGuests": {
+    "eyebrow": "PARA TUS HUÉSPEDES",
+    "headline": "Una estadía sin esfuerzo de la que hablarán.",
+    "card1Title": "Respuestas al instante, 24/7",
+    "card1Body": "Sin esperas, sin fila en recepción.",
+    "card2Title": "Su idioma",
+    "card2Body": "Inglés, español, portugués y más.",
+    "card3Title": "Recomendaciones locales reales",
+    "card3Body": "Sugerencias, no listas genéricas.",
+    "card4Title": "Planes, listos",
+    "card4Body": "Desde una cena hasta un día completo.",
+    "card5Title": "Privado y seguro",
+    "card5Body": "Los datos del huésped están protegidos.",
+    "card6Title": "Siempre a un toque",
+    "card6Body": "Un escaneo, y Bell está ahí."
+  },
+  "humanPlusAI": {
+    "eyebrow": "HUMANO + IA",
+    "headline": "Bell no reemplaza a tu equipo.\nLes devuelve su tiempo.",
+    "body": "La calidez de tu personal es la razón por la que los huéspedes regresan. Bell les quita las preguntas repetitivas para que puedan hacer lo que las máquinas no pueden — hacer que las personas se sientan genuinamente bienvenidas. Mejor experiencia para los huéspedes. Más espacio para tu equipo. Más razones para volver.",
+    "pillar1Title": "Elevar la experiencia",
+    "pillar1Body": "Cada huésped tiene un conserje, no una fila.",
+    "pillar2Title": "Liberar tu equipo",
+    "pillar2Body": "Menos repetición, más hospitalidad real.",
+    "pillar3Title": "Crecer tus ingresos",
+    "pillar3Body": "Más reservas, más gasto local, más lealtad."
+  },
+  "forEstablishments": {
+    "eyebrow": "PARA TU ESTABLECIMIENTO",
+    "headline": "Huéspedes más felices. Noches más ocupadas. Un equipo que respira.",
+    "body": "Bell convierte la curiosidad de los huéspedes en reservas y gasto local — silenciosamente, las 24 horas, con la voz de tu marca. Tú mantienes el control; Bell hace el trabajo.",
+    "outcome1": "Más reservas y consumo en el establecimiento",
+    "outcome2": "Recepción liberada de preguntas repetitivas",
+    "outcome3": "Un toque moderno y premium que los huéspedes notan",
+    "outcome4": "Configuración rápida, con tu marca"
+  },
+  "useCases": {
+    "eyebrow": "PARA QUIÉN ES BELL",
+    "headline": "Hecha para los lugares que hacen el North Fork.",
+    "case1Title": "Hoteles y resorts",
+    "case1Body": "Un conserje para cada habitación, a escala.",
+    "case2Title": "Posadas y B&Bs",
+    "case2Body": "Hospitalidad de gran propiedad, con toque boutique.",
+    "case3Title": "Restaurantes",
+    "case3Body": "Menús, maridajes y reservas, respondidos al instante.",
+    "case4Title": "Bodegas",
+    "case4Body": "Degustaciones, horarios y maridajes que tus visitantes amarán."
+  },
+  "socialProof": {
+    "eyebrow": "EN EL NORTH FORK DESDE EL INICIO",
+    "headline": "Con la confianza de los lugares con los que colaboramos.",
+    "partnersPlaceholder": "LOGOS DE SOCIOS",
+    "testimonialsPlaceholder": "TARJETAS DE TESTIMONIOS"
+  },
+  "faq": {
+    "eyebrow": "PREGUNTAS",
+    "headline": "Buenas preguntas. Respuestas honestas.",
+    "q1": "¿Bell reemplaza a mi personal de recepción?",
+    "a1": "No. Bell maneja las preguntas repetitivas para que tu equipo pueda enfocarse en la hospitalidad real. Es un complemento, no un reemplazo.",
+    "q2": "¿Cómo la usan los huéspedes?",
+    "a2": "Escanean un código QR — en la mesa, en la habitación, en el mostrador. Sin descargar ninguna app.",
+    "q3": "¿Qué idiomas habla Bell?",
+    "a3": "Inglés, español y portugués hoy, con más en camino.",
+    "q4": "¿Cuánto tiempo toma la configuración?",
+    "a4": "La mayoría de los socios están en vivo en días. Nosotros hacemos el trabajo pesado.",
+    "q5": "¿Están seguros los datos de mis huéspedes?",
+    "a5": "Sí. Los datos de los huéspedes están protegidos y nunca se venden.",
+    "q6": "¿Cuál es el precio?",
+    "a6": "Una suscripción recurrente simple. Encontremos la opción correcta en una llamada rápida."
+  },
+  "finalCta": {
+    "eyebrow": "LISTOS CUANDO TÚ LO ESTÉS",
+    "headline": "Dale a tus huéspedes el North Fork — sin esfuerzo.",
+    "subhead": "Ve a Bell en tu propiedad en una demo de 20 minutos.",
+    "ctaPrimary": "Reservar demo",
+    "ctaSecondary": "¿Nuevo en Bell? Hablemos →"
+  },
+  "footer": {
+    "tagline": "The North Fork Concierge",
+    "productTitle": "Producto",
+    "companyTitle": "Empresa",
+    "legalTitle": "Legal",
+    "howItWorks": "Cómo funciona",
+    "liveDemo": "Demo en vivo",
+    "faqLink": "FAQ",
+    "about": "Sobre nosotros",
+    "contact": "Contacto",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "poweredBy": "Powered by Bell.ai",
+    "copyright": "Bell. Todos los derechos reservados."
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "nav": {
+    "howItWorks": "How it works",
+    "liveDemo": "Live demo",
+    "forYourBusiness": "For your business",
+    "faq": "FAQ",
+    "bookDemo": "Book a demo"
+  },
+  "hero": {
+    "eyebrow": "THE NORTH FORK CONCIERGE",
+    "headline": "Give every guest a local insider —\nwithout adding to your team's plate.",
+    "subhead": "Bell is an AI concierge that knows the North Fork by heart. Guests scan a code and instantly get recommendations, reservations, and answers — in their own language, any hour.",
+    "ctaPrimary": "Book a demo",
+    "ctaSecondary": "See Bell in action →",
+    "trustLine": "Built for hotels, inns, restaurants and wineries on the North Fork."
+  },
+  "theShift": {
+    "eyebrow": "THE SHIFT",
+    "headline": "Your guests have questions around the clock.\nYour team can't — and shouldn't have to.",
+    "body": "\"What time does the tasting room close?\" \"Where's a good dinner spot tonight?\" \"Is there an ice cream place nearby?\" Great questions. Asked over and over. Bell handles them the moment they come up, so your front desk can focus on the moments that actually need a human touch.",
+    "pain1Title": "Repetitive questions",
+    "pain1Body": "The same dozen questions, every single day.",
+    "pain2Title": "After-hours silence",
+    "pain2Body": "Guests still wonder at 11pm. No one's at the desk.",
+    "pain3Title": "Missed local magic",
+    "pain3Body": "Guests leave without discovering the best of the area."
+  },
+  "meetBell": {
+    "eyebrow": "MEET BELL",
+    "headline": "Not a chatbot. A concierge who actually knows the place.",
+    "body": "Bell speaks like a warm, well-traveled local — not a script. She remembers what your guests like, points them to the right tasting room, books the table, and plans the day. All in the look and feel of your property.",
+    "chip1": "Warm",
+    "chip2": "Knowledgeable",
+    "chip3": "Discreet",
+    "chip4": "Always on"
+  },
+  "howItWorks": {
+    "eyebrow": "HOW IT WORKS",
+    "headline": "Up and running in a weekend, not a quarter.",
+    "step1Number": "01",
+    "step1Title": "Scan",
+    "step1Body": "Guests scan your Bell QR code — on the table, in the room, at the front desk. No app to download.",
+    "step2Number": "02",
+    "step2Title": "Ask anything",
+    "step2Body": "From wine pairings to closing times to \"surprise my partner.\" Bell answers instantly, in the guest's language.",
+    "step3Number": "03",
+    "step3Title": "Experience more",
+    "step3Body": "Bell books, recommends, and plans — so guests do more, spend more, and remember your place for it."
+  },
+  "liveDemo": {
+    "eyebrow": "SEE BELL IN ACTION",
+    "headline": "This is what your guests will feel.",
+    "subhead": "A real Bell conversation — try the suggestions below.",
+    "bellOpening": "Hi, I'm Bell — your North Fork concierge. Ask me anything: wineries, happy hour, ice cream, or let me plan your day.",
+    "chip1": "Wine tasting nearby",
+    "chip2": "Best happy hour tonight",
+    "chip3": "Plan a romantic evening",
+    "chip4": "Ice cream spots",
+    "script": {
+      "wineTasting": {
+        "userMessage": "Wine tasting nearby",
+        "bellResponse": "Great choice! The North Fork is wine country. I'd start with Bedell Cellars for their gorgeous views and approachable tastings, then head to Raphael for something more structured. Both are within 10 minutes. Want me to check their hours or help you plan the afternoon?"
+      },
+      "happyHour": {
+        "userMessage": "Best happy hour tonight",
+        "bellResponse": "Tonight's top pick: First and South in Greenport opens their patio at 4pm — half-price oysters and local draft beers until 6. The Frisky Oyster is a close second. Want directions or a table reservation?"
+      },
+      "romanticEvening": {
+        "userMessage": "Plan a romantic evening",
+        "bellResponse": "Lovely. Start with sunset oysters by the water, then a quiet table at a local favorite, and finish with a walk under the string lights. Want me to book the table?"
+      },
+      "iceCream": {
+        "userMessage": "Ice cream spots",
+        "bellResponse": "Scoops in Mattituck is the local favorite — homemade flavors, seasonal specials, and a line worth waiting in. Open until 9pm tonight. It's about 8 minutes from here. Want me to add it to your evening plan?"
+      }
+    }
+  },
+  "onlyBellKnows": {
+    "eyebrow": "ONLY BELL KNOWS",
+    "headline": "Local knowledge you won't find on a search engine.",
+    "body": "Bell is built on real, verified North Fork knowledge — the wineries worth the drive, the table with the sunset view, the happy hour that locals actually go to. Curated, current, and specific to where your guests are standing.",
+    "chip1": "Wineries",
+    "chip2": "Restaurants",
+    "chip3": "Happy hours",
+    "chip4": "Hidden gems",
+    "chip5": "Day plans"
+  },
+  "forGuests": {
+    "eyebrow": "FOR YOUR GUESTS",
+    "headline": "An effortless stay they'll talk about.",
+    "card1Title": "Instant answers, 24/7",
+    "card1Body": "No waiting, no front-desk line.",
+    "card2Title": "Their language",
+    "card2Body": "English, Spanish, Portuguese and more.",
+    "card3Title": "Truly local picks",
+    "card3Body": "Recommendations, not generic lists.",
+    "card4Title": "Plans, made",
+    "card4Body": "From a single dinner to a full day.",
+    "card5Title": "Private & secure",
+    "card5Body": "Guest data stays protected.",
+    "card6Title": "Always one tap away",
+    "card6Body": "A scan, and Bell is right there."
+  },
+  "humanPlusAI": {
+    "eyebrow": "HUMAN + AI",
+    "headline": "Bell doesn't replace your team.\nIt gives them their time back.",
+    "body": "The warmth of your staff is why guests come back. Bell takes the repetitive questions off their plate so they can do what machines can't — make people feel genuinely welcome. Better experience for guests. More breathing room for your team. More reasons to return.",
+    "pillar1Title": "Elevate the experience",
+    "pillar1Body": "Every guest gets a concierge, not a queue.",
+    "pillar2Title": "Free your team",
+    "pillar2Body": "Less repetition, more real hospitality.",
+    "pillar3Title": "Grow your revenue",
+    "pillar3Body": "More bookings, more local spend, more loyalty."
+  },
+  "forEstablishments": {
+    "eyebrow": "FOR YOUR ESTABLISHMENT",
+    "headline": "Happier guests. Busier nights. A team that breathes.",
+    "body": "Bell turns guest curiosity into bookings and local spend — quietly, around the clock, in your brand's voice. You stay in control; Bell does the legwork.",
+    "outcome1": "More reservations and on-property spend",
+    "outcome2": "Front desk freed from repetitive questions",
+    "outcome3": "A premium, modern touch guests notice",
+    "outcome4": "Set up fast, branded as yours"
+  },
+  "useCases": {
+    "eyebrow": "WHO BELL IS FOR",
+    "headline": "Made for the places that make the North Fork.",
+    "case1Title": "Hotels & resorts",
+    "case1Body": "A concierge for every room, at scale.",
+    "case2Title": "Inns & B&Bs",
+    "case2Body": "Big-property hospitality, boutique feel.",
+    "case3Title": "Restaurants",
+    "case3Body": "Menus, pairings and bookings, answered instantly.",
+    "case4Title": "Wineries",
+    "case4Body": "Tastings, hours and pairings your visitors will love."
+  },
+  "socialProof": {
+    "eyebrow": "EARLY ON THE NORTH FORK",
+    "headline": "Trusted by the places we partner with.",
+    "partnersPlaceholder": "PARTNER LOGOS",
+    "testimonialsPlaceholder": "TESTIMONIAL CARDS"
+  },
+  "faq": {
+    "eyebrow": "QUESTIONS",
+    "headline": "Good questions. Honest answers.",
+    "q1": "Does Bell replace my front desk staff?",
+    "a1": "No. Bell handles repetitive questions so your team can focus on real hospitality. It's a complement, not a replacement.",
+    "q2": "How do guests use it?",
+    "a2": "They scan a QR code — on the table, in the room, at the desk. No app to download.",
+    "q3": "What languages does Bell speak?",
+    "a3": "English, Spanish and Portuguese today, with more on the way.",
+    "q4": "How long does setup take?",
+    "a4": "Most partners are live within days. We handle the heavy lifting.",
+    "q5": "Is my guests' data safe?",
+    "a5": "Yes. Guest data is protected and never sold.",
+    "q6": "How is it priced?",
+    "a6": "A simple recurring subscription. Let's find the right fit on a quick call."
+  },
+  "finalCta": {
+    "eyebrow": "READY WHEN YOU ARE",
+    "headline": "Give your guests the North Fork — effortlessly.",
+    "subhead": "See Bell in your property in a 20-minute demo.",
+    "ctaPrimary": "Book a demo",
+    "ctaSecondary": "New to Bell? Let's talk →"
+  },
+  "footer": {
+    "tagline": "The North Fork Concierge",
+    "productTitle": "Product",
+    "companyTitle": "Company",
+    "legalTitle": "Legal",
+    "howItWorks": "How it works",
+    "liveDemo": "Live demo",
+    "faqLink": "FAQ",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "poweredBy": "Powered by Bell.ai",
+    "copyright": "Bell. All rights reserved."
+  }
+}
