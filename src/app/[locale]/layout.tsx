@@ -4,6 +4,8 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { serif, sans } from "@/lib/fonts";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -30,7 +32,9 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale} className={`${serif.variable} ${sans.variable}`}>
       <body className="font-sans antialiased">
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
