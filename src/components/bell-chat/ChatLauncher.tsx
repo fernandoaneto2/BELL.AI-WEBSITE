@@ -84,8 +84,8 @@ export function ChatLauncher({ locale }: ChatLauncherProps) {
           >
             {/* Panel header */}
             <div className="flex items-center gap-3 px-4 py-3.5 border-b border-[rgba(255,255,255,0.06)] shrink-0">
-              <div className="w-8 h-8 rounded-full bg-ink-soft flex items-center justify-center shrink-0">
-                <BellMarkInline size={16} className="text-gold" />
+              <div className="w-11 h-11 rounded-full bg-ink-soft flex items-center justify-center shrink-0">
+                <BellMarkInline size={28} className="text-gold" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-sans font-medium text-text-on-ink leading-none">Bell</p>
@@ -238,7 +238,7 @@ export function ChatLauncher({ locale }: ChatLauncherProps) {
               transition={{ duration: 0.18 }}
               style={{ marginTop: "-2px" }} // optical centering
             >
-              <BellMarkInline size={26} className="text-gold" />
+              <BellMarkInline size={40} className="text-gold" />
             </motion.span>
           )}
         </AnimatePresence>

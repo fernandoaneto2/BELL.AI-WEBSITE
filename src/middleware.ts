@@ -4,6 +4,5 @@ import { routing } from "./i18n/routing";
 export default createMiddleware(routing);
 
 export const config = {
-  // Exclude /api, /demo, Next internals, and static files from locale middleware
-  matcher: ["/((?!api|_next|_vercel|.*\\..*|demo).*)"],
+  matcher: ["/((?!_next|_vercel|.*\\..*).*)"],
 };
