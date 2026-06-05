@@ -27,6 +27,16 @@ export function LiveDemo() {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
   }, [messages]);
 
+  // Receive deep-link handoff from the Hero chip buttons (Surface A → Surface C)
+  useEffect(() => {
+    function onHeroHandoff(e: Event) {
+      const text = (e as CustomEvent<{ text: string }>).detail?.text;
+      if (text) handleSend(text);
+    }
+    window.addEventListener("bell:hero-handoff", onHeroHandoff);
+    return () => window.removeEventListener("bell:hero-handoff", onHeroHandoff);
+  }, [isSending]); // eslint-disable-line react-hooks/exhaustive-deps
+
   function handleSend(text: string) {
     const trimmed = text.trim();
     if (!trimmed || isSending) return;

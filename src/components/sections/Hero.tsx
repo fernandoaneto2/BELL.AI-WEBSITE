@@ -5,7 +5,16 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { StringLights } from "@/components/ui/StringLights";
+import { BellMark } from "@/components/ui/BellMark";
 import { fadeUp, stagger } from "@/lib/motion";
+
+// Dispatches a custom event picked up by LiveDemo to auto-send the message
+function handoffToLiveDemo(text: string) {
+  document.getElementById("live-demo")?.scrollIntoView({ behavior: "smooth" });
+  setTimeout(() => {
+    window.dispatchEvent(new CustomEvent("bell:hero-handoff", { detail: { text } }));
+  }, 600); // small delay so the section is in view before the message fires
+}
 
 export function Hero() {
   const t = useTranslations("hero");
@@ -93,38 +102,41 @@ export function Hero() {
           </motion.p>
         </motion.div>
 
-        {/* App mockup placeholder */}
+        {/* App mockup card — Surface A. Chips wired for deep-link handoff to #live-demo.
+            Visual markup/styling preserved byte-for-byte; <span> → <button> for interactivity. */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           animate="visible"
           className="relative mt-16 w-full max-w-[320px] rounded-[28px] bg-sand/10 border border-[rgba(201,162,75,0.25)] backdrop-blur-sm overflow-hidden"
           style={{ minHeight: 200 }}
-          aria-label="[APP MOCKUP PLACEHOLDER] — TODO: replace with real Bell app screenshot"
+          aria-label="Bell AI concierge preview"
         >
           <div className="p-5 flex flex-col gap-4">
             {/* Status bar */}
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-online animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-online animate-pulse" aria-hidden="true" />
               <span className="text-[11px] font-sans text-text-on-ink/60 tracking-wide uppercase">
                 CONCIERGE BELL
               </span>
             </div>
-            {/* Mock chat bubble */}
+            {/* Greeting bubble */}
             <div className="rounded-2xl rounded-tl-sm bg-sand/15 px-4 py-3">
               <p className="text-sm font-sans text-text-on-ink/80 leading-relaxed">
                 Hi, I&apos;m Bell — your North Fork concierge. Ask me anything!
               </p>
             </div>
-            {/* Mock chips */}
-            <div className="flex flex-wrap gap-2">
-              {["Wineries", "Happy hour", "Plan my day"].map((c) => (
-                <span
-                  key={c}
-                  className="px-3 py-1 rounded-full border border-[rgba(201,162,75,0.35)] text-[11px] font-sans text-gold"
+            {/* Chips — <button> keeps exact same visual classes as the original <span> */}
+            <div className="flex flex-wrap gap-2" role="group" aria-label="Quick suggestions">
+              {["Wineries", "Happy hour", "Plan my day"].map((chip) => (
+                <button
+                  key={chip}
+                  onClick={() => handoffToLiveDemo(chip)}
+                  className="px-3 py-1 rounded-full border border-[rgba(201,162,75,0.35)] text-[11px] font-sans text-gold hover:bg-[rgba(201,162,75,0.10)] transition-colors duration-150"
+                  aria-label={`Ask Bell: ${chip}`}
                 >
-                  {c}
-                </span>
+                  {chip}
+                </button>
               ))}
             </div>
           </div>
@@ -132,6 +144,11 @@ export function Hero() {
           <p className="text-center pb-3 text-[9px] font-sans tracking-[0.18em] uppercase text-text-on-ink/30">
             POWERED BY BELL.AI
           </p>
+        </motion.div>
+
+        {/* Bell mark watermark */}
+        <motion.div variants={fadeUp} className="mt-6 opacity-20" aria-hidden="true">
+          <BellMark size={20} color="#E5C580" />
         </motion.div>
       </div>
 
