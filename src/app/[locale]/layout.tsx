@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import { serif, sans } from "@/lib/fonts";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ChatLauncher } from "@/components/bell-chat/ChatLauncher";
 import "../globals.css";
 
 type Props = {
@@ -90,6 +91,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Navbar />
           <main id="main-content">{children}</main>
           <Footer />
+          <ChatLauncher locale={locale as "en" | "es" | "pt"} />
         </NextIntlClientProvider>
       </body>
     </html>
