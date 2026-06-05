@@ -1,79 +1,37 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { BellMark } from "@/components/ui/BellMark";
 import { fadeUp, stagger, viewportOnce } from "@/lib/motion";
-
-type ScriptKey = "wineTasting" | "happyHour" | "romanticEvening" | "iceCream";
-
-interface Message {
-  id: string;
-  role: "bell" | "user";
-  text: string;
-}
-
-const TYPING_DELAY = 800;
-const CHAR_DELAY = 18;
+import { useBellChat, type Locale } from "@/lib/bell-chat/useBellChat";
 
 export function LiveDemo() {
   const t = useTranslations("liveDemo");
+  const locale = useLocale() as Locale;
 
-  const chips: { key: ScriptKey; label: string }[] = [
-    { key: "wineTasting", label: t("chip1") },
-    { key: "happyHour", label: t("chip2") },
-    { key: "romanticEvening", label: t("chip3") },
-    { key: "iceCream", label: t("chip4") },
-  ];
+  const chips = [t("chip1"), t("chip2"), t("chip3"), t("chip4")];
 
-  const openingMessage = t("bellOpening");
+  // TODO: i18n — on /pt the greeting is still in EN; localize when i18n pass is done
+  const greeting = t("bellOpening");
 
-  const [messages, setMessages] = useState<Message[]>([
-    { id: "opening", role: "bell", text: openingMessage },
-  ]);
-  const [typing, setTyping] = useState(false);
-  const [displayText, setDisplayText] = useState("");
-  const [activeChip, setActiveChip] = useState<ScriptKey | null>(null);
+  const { messages, isSending, send } = useBellChat({ locale, greeting });
+  const [inputValue, setInputValue] = useState("");
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
-  }, [messages, displayText]);
+  }, [messages]);
 
-  function handleChip(chipKey: ScriptKey) {
-    if (typing) return;
-
-    const userMsg = t(`script.${chipKey}.userMessage`);
-    const bellResp = t(`script.${chipKey}.bellResponse`);
-
-    setActiveChip(chipKey);
-    setMessages([
-      { id: "opening", role: "bell", text: openingMessage },
-      { id: `user-${chipKey}`, role: "user", text: userMsg },
-    ]);
-    setTyping(true);
-    setDisplayText("");
-
-    setTimeout(() => {
-      let i = 0;
-      const interval = setInterval(() => {
-        i++;
-        setDisplayText(bellResp.slice(0, i));
-        if (i >= bellResp.length) {
-          clearInterval(interval);
-          setMessages((msgs) => [
-            ...msgs,
-            { id: `bell-${chipKey}`, role: "bell", text: bellResp },
-          ]);
-          setTyping(false);
-          setDisplayText("");
-        }
-      }, CHAR_DELAY);
-    }, TYPING_DELAY);
+  function handleSend(text: string) {
+    const trimmed = text.trim();
+    if (!trimmed || isSending) return;
+    send(trimmed);
+    setInputValue("");
   }
 
   return (
@@ -100,7 +58,7 @@ export function LiveDemo() {
           </motion.p>
         </div>
 
-        {/* Chat window */}
+        {/* Chat window — markup and styling unchanged from static mockup */}
         <motion.div
           variants={fadeUp}
           className="w-full max-w-md rounded-[28px] bg-ink shadow-[0_32px_80px_rgba(26,35,50,0.18)] overflow-hidden"
@@ -150,79 +108,72 @@ export function LiveDemo() {
                         : "rounded-2xl rounded-tr-sm bg-[rgba(201,162,75,0.15)] border border-[rgba(201,162,75,0.25)] px-4 py-3"
                     }
                   >
-                    <p
-                      className={
-                        msg.role === "bell"
-                          ? "text-sm font-sans text-text-on-ink/85 leading-relaxed"
-                          : "text-sm font-sans text-gold-light leading-relaxed"
-                      }
-                    >
-                      {msg.text}
-                    </p>
+                    {msg.pending ? (
+                      /* Typing indicator — reuses existing bubble classes */
+                      <div className="flex gap-1 py-0.5" aria-label="Bell is typing">
+                        {[0, 1, 2].map((i) => (
+                          <span
+                            key={i}
+                            className="w-1.5 h-1.5 rounded-full bg-text-on-ink/40"
+                            style={{ animation: `bounce 1s ${i * 0.2}s infinite` }}
+                            aria-hidden="true"
+                          />
+                        ))}
+                      </div>
+                    ) : (
+                      <p
+                        className={
+                          msg.role === "bell"
+                            ? "text-sm font-sans text-text-on-ink/85 leading-relaxed whitespace-pre-wrap"
+                            : "text-sm font-sans text-gold-light leading-relaxed"
+                        }
+                      >
+                        {msg.text}
+                      </p>
+                    )}
                   </div>
                 </motion.div>
               ))}
             </AnimatePresence>
-
-            {/* Typing indicator */}
-            {typing && displayText && (
-              <motion.div
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="self-start max-w-[88%]"
-              >
-                <div className="rounded-2xl rounded-tl-sm bg-ink-soft px-4 py-3">
-                  <p className="text-sm font-sans text-text-on-ink/85 leading-relaxed">
-                    {displayText}
-                    <span className="inline-block w-0.5 h-4 bg-gold ml-0.5 animate-pulse" aria-hidden="true" />
-                  </p>
-                </div>
-              </motion.div>
-            )}
-
-            {typing && !displayText && (
-              <div className="self-start flex gap-1 px-4 py-3 rounded-2xl rounded-tl-sm bg-ink-soft">
-                {[0, 1, 2].map((i) => (
-                  <span
-                    key={i}
-                    className="w-1.5 h-1.5 rounded-full bg-text-on-ink/40"
-                    style={{ animation: `bounce 1s ${i * 0.2}s infinite` }}
-                    aria-hidden="true"
-                  />
-                ))}
-              </div>
-            )}
           </div>
 
           {/* Quick reply chips */}
           <div className="px-4 pb-3 flex flex-wrap gap-2">
-            {chips.map(({ key, label }) => (
+            {chips.map((label) => (
               <button
-                key={key}
-                onClick={() => handleChip(key)}
-                disabled={typing}
-                aria-pressed={activeChip === key}
-                className={`px-3.5 py-1.5 rounded-full border text-[11px] font-sans transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed ${
-                  activeChip === key
-                    ? "border-gold bg-[rgba(201,162,75,0.25)] text-gold"
-                    : "border-[rgba(201,162,75,0.30)] text-gold/70 hover:border-gold hover:text-gold"
-                }`}
+                key={label}
+                onClick={() => handleSend(label)}
+                disabled={isSending}
+                className="px-3.5 py-1.5 rounded-full border text-[11px] font-sans transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed border-[rgba(201,162,75,0.30)] text-gold/70 hover:border-gold hover:text-gold"
               >
                 {label}
               </button>
             ))}
           </div>
 
-          {/* Input bar */}
+          {/* Input bar — <p> replaced with <input>, same visual container */}
           <div className="px-4 pb-4">
             <div className="rounded-full bg-ink-soft/60 border border-[rgba(201,162,75,0.20)] px-4 py-2.5 flex items-center justify-between gap-3">
-              <p className="text-sm font-sans text-text-on-ink/30 flex-1 truncate">
-                {/* TODO: wire to real Bell API (post-launch) */}
-                Ask me anything...
-              </p>
-              <div className="w-7 h-7 rounded-full bg-gold/80 flex items-center justify-center shrink-0">
+              <input
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") handleSend(inputValue);
+                }}
+                disabled={isSending}
+                placeholder="Ask me anything..."
+                aria-label="Send a message to Bell"
+                className="bg-transparent text-sm font-sans text-text-on-ink/80 placeholder:text-text-on-ink/30 flex-1 outline-none min-w-0 disabled:cursor-not-allowed"
+              />
+              <button
+                onClick={() => handleSend(inputValue)}
+                disabled={isSending || !inputValue.trim()}
+                aria-label="Send message"
+                className="w-7 h-7 rounded-full bg-gold/80 flex items-center justify-center shrink-0 disabled:opacity-40 transition-opacity"
+              >
                 <Send size={11} className="text-white" />
-              </div>
+              </button>
             </div>
           </div>
 

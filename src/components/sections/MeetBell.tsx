@@ -7,6 +7,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { BellMark } from "@/components/ui/BellMark";
 import { fadeUp, stagger, viewportOnce } from "@/lib/motion";
 
+// TODO: Surface B — this is a curated static marketing illustration. Wire to useBellChat if the owner decides to make it interactive later.
 export function MeetBell() {
   const t = useTranslations("meetBell");
 
