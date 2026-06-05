@@ -237,7 +237,7 @@ export function ChatLauncher({ locale }: ChatLauncherProps) {
               transition={{ duration: 0.18 }}
               style={{ marginTop: "-2px" }} // optical centering
             >
-              <BellMarkInline size={56} className="text-gold drop-shadow-lg" />
+              <BellMarkInline size={80} className="text-gold drop-shadow-lg" />
             </motion.span>
           )}
         </AnimatePresence>
