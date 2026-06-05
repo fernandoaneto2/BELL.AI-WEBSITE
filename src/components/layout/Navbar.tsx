@@ -43,7 +43,7 @@ export function Navbar() {
           className="flex items-center gap-2.5 shrink-0 focus-visible:outline-gold focus-visible:outline-2 focus-visible:outline-offset-2 rounded-sm"
           aria-label="Bell — home"
         >
-          <BellMark size={44} />
+          <BellMark size={52} />
           <span className="font-serif text-xl font-medium text-ink tracking-tight">
             Bell
           </span>

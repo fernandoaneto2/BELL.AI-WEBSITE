@@ -209,9 +209,8 @@ export function ChatLauncher({ locale }: ChatLauncherProps) {
             : {}
         }
         transition={{ duration: 1.8, ease: "easeOut" }}
-        className="fixed z-50 w-14 h-14 rounded-full bg-ink flex items-center justify-center
-          shadow-[0_4px_24px_rgba(26,35,50,0.35),inset_0_0_0_1px_rgba(201,162,75,0.25)]
-          focus-visible:outline-2 focus-visible:outline-gold focus-visible:outline-offset-2"
+        className="fixed z-50 flex items-center justify-center bg-transparent border-none
+          focus-visible:outline-2 focus-visible:outline-gold focus-visible:outline-offset-4 rounded-full"
         style={{
           bottom: "calc(env(safe-area-inset-bottom, 0px) + 24px)",
           right: "calc(env(safe-area-inset-right, 0px) + 24px)",
@@ -225,9 +224,9 @@ export function ChatLauncher({ locale }: ChatLauncherProps) {
               animate={{ opacity: 1, rotate: 0, scale: 1 }}
               exit={{ opacity: 0, rotate: 45, scale: 0.7 }}
               transition={{ duration: 0.18 }}
-              className="text-gold"
+              className="w-12 h-12 rounded-full bg-ink flex items-center justify-center shadow-[0_4px_16px_rgba(26,35,50,0.35)]"
             >
-              <X size={20} />
+              <X size={20} className="text-gold" />
             </motion.span>
           ) : (
             <motion.span
@@ -238,7 +237,7 @@ export function ChatLauncher({ locale }: ChatLauncherProps) {
               transition={{ duration: 0.18 }}
               style={{ marginTop: "-2px" }} // optical centering
             >
-              <BellMarkInline size={40} className="text-gold" />
+              <BellMarkInline size={56} className="text-gold drop-shadow-lg" />
             </motion.span>
           )}
         </AnimatePresence>

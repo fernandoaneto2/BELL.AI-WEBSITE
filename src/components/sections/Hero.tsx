@@ -148,7 +148,7 @@ export function Hero() {
 
         {/* Bell mark watermark */}
         <motion.div variants={fadeUp} className="mt-6 opacity-20" aria-hidden="true">
-          <BellMark size={36} color="#E5C580" />
+          <BellMark size={44} color="#E5C580" />
         </motion.div>
       </div>
 

@@ -45,7 +45,7 @@ export async function Footer() {
               className="flex items-center gap-2.5 w-fit"
               aria-label="Bell — home"
             >
-              <BellMark size={44} color="#E5C580" />
+              <BellMark size={52} color="#E5C580" />
               <span className="font-serif text-xl font-medium text-text-on-ink tracking-tight">
                 Bell
               </span>
