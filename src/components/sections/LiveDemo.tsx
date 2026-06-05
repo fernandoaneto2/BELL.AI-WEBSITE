@@ -96,7 +96,7 @@ export function LiveDemo() {
           <div
             ref={scrollRef}
             className="px-4 py-5 flex flex-col gap-3 overflow-y-auto"
-            style={{ minHeight: 240, maxHeight: 320 }}
+            style={{ minHeight: 320, maxHeight: 440 }}
           >
             <AnimatePresence initial={false}>
               {messages.map((msg) => (

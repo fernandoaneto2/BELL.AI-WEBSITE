@@ -54,8 +54,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
     },
     icons: {
-      icon: "/favicon.svg",
-      apple: "/favicon.svg",
+      icon: "/logo bell sem fundo.PNG",
+      apple: "/logo bell sem fundo.PNG",
     },
     robots: {
       index: true,

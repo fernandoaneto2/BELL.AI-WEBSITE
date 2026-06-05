@@ -79,7 +79,7 @@ export function ChatLauncher({ locale }: ChatLauncherProps) {
               bottom: "calc(env(safe-area-inset-bottom, 0px) + 88px)",
               right: "calc(env(safe-area-inset-right, 0px) + 24px)",
               width: "min(380px, calc(100vw - 32px))",
-              maxHeight: "min(560px, calc(100svh - 120px))",
+              maxHeight: "min(680px, calc(100svh - 100px))",
             }}
           >
             {/* Panel header */}
