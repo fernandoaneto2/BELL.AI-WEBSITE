@@ -209,7 +209,7 @@ export function ChatLauncher({ locale }: ChatLauncherProps) {
             : {}
         }
         transition={{ duration: 1.8, ease: "easeOut" }}
-        className="fixed z-50 flex items-center justify-center bg-transparent border-none
+        className="fixed z-50 flex items-center justify-center bg-transparent border-none cursor-pointer
           focus-visible:outline-2 focus-visible:outline-gold focus-visible:outline-offset-4 rounded-full"
         style={{
           bottom: "calc(env(safe-area-inset-bottom, 0px) + 24px)",
